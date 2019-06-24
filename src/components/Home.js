@@ -2,11 +2,13 @@ import React from 'react';
 
 const Home = props => {
 	return (
-		<div>
-			<h2>Home</h2>
-			<img src='https://www.uncommongoods.com/images/category/fun-fullwidth.jpg' alt="nothgin" />
+		<div className='home'>
+			<h1>The Avengers Are Here to Save the Day</h1>
+			<img src='https://terrigen-cdn-dev.marvel.com/content/prod/1x/002irm_com_crd_01.jpg' alt="nothgin" />
 
-			<button>Shop Now!</button>
+			<div>
+				<button>See Them All</button>
+			</div>
 		</div>
 	)
 }
