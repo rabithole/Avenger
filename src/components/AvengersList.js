@@ -1,5 +1,5 @@
 import React from 'react';
-import { avengers } from '../avengersData';
+// import { avengers } from '../avengersData';
 // import SingleAvenger from './components/SingleAvenger';
 
 
@@ -8,12 +8,13 @@ import { Link } from 'react-router-dom';
 
 
 const AvengersList = props => {
+	// console.log(props)
 		return (
 			<div className='list'>
 				<header>
 					<h1>The Avengers</h1>
 				</header>
-				{avengers.map(item => (
+				{props.avenger.map(item => (
 					<Link to={`/SingleAvenger/${item.id}`}>
 						<Avenger
 							name={item.name}

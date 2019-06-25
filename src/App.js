@@ -8,9 +8,12 @@ import ItemList from './components/ItemList';
 // import Avenger from './components/Avenger';
 import SingleAvenger from './components/SingleAvenger';
 
+import { avengers } from './avengersData';
+
 import { Route } from 'react-router-dom';
 
 function App() {
+  // console.log(avengers)
   return (
     <div className="App">
       <nav>
@@ -19,10 +22,20 @@ function App() {
       </nav>
 
       <Route exact path='/' component={Home} />
-      <Route path='/AvengersList' component={AvengersList} />
 
       <Route path='/ItemList' component={ItemList} />
-      <Route path='/SingleAvenger/:id' component={SingleAvenger} />
+      <Route 
+        path='/SingleAvenger/:id' 
+        render={props => <SingleAvenger {...props} 
+        avenger={avengers}
+      /> }/>
+
+      <Route 
+        path='/AvengersList' 
+        render={props => <AvengersList {...props} 
+        avenger={avengers}
+      />}/>
+      
       {/*
       <Route path="/contact" component={Contact}/>
       <Route path="/about" component={About}/>
