@@ -92,7 +92,7 @@ nav a {
   margin: 30px 30px;
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-size: 1.5em;
 }
 
@@ -116,4 +116,9 @@ nav a {
 
 .list img {
   margin: 30px auto;
+}
+
+.active {
+  font-weight: bold;
+  text-shadow: 4px 4px 4px red;
 }

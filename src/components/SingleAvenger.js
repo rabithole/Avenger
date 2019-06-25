@@ -1,6 +1,6 @@
 import React from 'react';
 // import { avengers } from '../avengersData';
-import { Route, Link } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 
 import AvengerDetails from './AvengerDetails';
 import AvengerMovies from './AvengerMovies';
@@ -20,8 +20,8 @@ const SingleAvenger = props => {
 			<p><strong>The {avenger.nickname}</strong></p>
 
 			<nav>
-				<Link to={`/SingleAvenger/${props.match.params.id}`}>Description</Link>
-				<Link to={`/SingleAvenger/${props.match.params.id}/AvengerMovies`}>Movies</Link>
+				<NavLink to={`/SingleAvenger/${props.match.params.id}`} exact>Description</NavLink>
+				<NavLink to={`/SingleAvenger/${props.match.params.id}/AvengerMovies`} exact>Movies</NavLink>
 			</nav>
 
 			<Route 
